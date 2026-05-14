@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <p class="subtitle">Your day,</p>
+      <h1 class="title">organised.</h1>
+      <p class="task-count" id="taskCount">0 things to do</p>
+    </div>
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="What needs doing?" />
+      <button onclick="addTask()">+</button>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
+      <button class="filter-btn personal" onclick="filterTasks('personal', this)">🌸 Personal</button>
+      <button class="filter-btn work" onclick="filterTasks('work', this)">💙 Work</button>
+      <button class="filter-btn health" onclick="filterTasks('health', this)">🌿 Health</button>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search tasks..." oninput="searchTasks()" />
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
